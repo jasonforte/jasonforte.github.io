@@ -11,6 +11,11 @@
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html {
   font-size: 62.5%; // 1rem = 10px; 10px / 16px = 62.5%
 }
@@ -44,7 +49,14 @@ header {
   }
 }
 
+main {
+  max-width: 76.8rem;
+  margin: 0 auto;
+}
+
+
 .article {
+
   &__heading {
     font-family: "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 4.0rem;
@@ -58,12 +70,65 @@ header {
     color: $gray-01;
 
     & > span {
-      color: blue;
+      color: $color-black;
+    }
+  }
+
+  &__blurb {
+    margin-top: 1.4rem;
+  }
+
+  &__readmore {
+    margin-top: 1.4rem;
+    font-size: 1.4rem;
+
+    &:hover {
+      color: $color-silver;
     }
   }
 }
 
-main {
-  max-width: 76.8rem;
-  margin: 0 auto;
+.article__content {
+  margin-top: 0.2rem;
+
+  font-family: "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.6rem;
+  color: $article-color;
+  line-height: 1;
+
+  & > h2 {
+    font-size: 2.8rem;
+    margin-top: 2.4rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: -1px;
+  }
+
+  & > pre {
+    background-color: rgb(242, 242, 242);
+    padding: 1.2rem;
+    margin: 1.2rem 0;
+    border-radius: 0.2rem;
+
+    & > code {
+      font-size: 1.3rem;
+      font-family: 'Hack', Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+      line-height: 2.2rem;
+    }
+  }
+}
+
+article {
+  &:not(:first) {
+    border-top: solid 1px $color-black;
+  }
+}
+
+footer {
+  margin-top: 5rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: $gray-01;
+  text-transform: uppercase;
 }

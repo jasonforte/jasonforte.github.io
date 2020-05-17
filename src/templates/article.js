@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import ReactMarkdown from 'react-markdown'
+import SEO from '../components/seo'
 
 const months = [
   "January",
@@ -21,15 +22,15 @@ const months = [
 
 const ArticleTemplate = ({ data }) => {
   var date = new Date(data.strapiArticle.created_at);
-  console.log('data', data)
   return (
     <Layout>
+      <SEO title={data.strapiArticle.title} />
       <h1 className={"article__heading"}>{data.strapiArticle.title}</h1>
       <p className={"article__meta"}>By <span>Jason Forte</span> • {date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</p>
       <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
-      <article>
+      <div className={"article__content"}>
         <ReactMarkdown source={data.strapiArticle.content} />
-      </article>
+      </div>
     </Layout>
   )
 }
