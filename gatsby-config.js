@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Jason Forte Blog`,
+    title: `From Cape Town 🠖 London`,
+    subtitle: '|  A blog about tech, ethics, startups & the future',
     description: ``,
     author: `@hellojforte`,
   },

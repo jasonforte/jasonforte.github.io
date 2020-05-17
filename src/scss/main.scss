@@ -1,3 +1,8 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/hack.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Raleway&family=Ubuntu:wght@300;400&display=swap');
+
+@import "variables";
+
 *,
 *::after,
 *::before {
@@ -8,4 +13,57 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px; 10px / 16px = 62.5%
+}
+
+body {
+  font-family: "Ubuntu 2", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+header {
+  margin: 0 auto;
+  max-width: 110rem;
+  padding: 0.5rem 0rem;
+  margin-bottom: 1.45rem;
+
+
+  & .title {
+    font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: $secondary-dark;
+  }
+
+  & .subtitle {
+    font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    line-height: 1.1;
+    font-size: 1.4rem;
+    color: $secondary-dark;
+    padding-left: 0.1rem;
+  }
+}
+
+.article {
+  &__heading {
+    font-family: "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 4.0rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+  }
+
+  &__meta {
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+    color: $gray-01;
+
+    & > span {
+      color: blue;
+    }
+  }
+}
+
+main {
+  max-width: 76.8rem;
+  margin: 0 auto;
 }
