@@ -11,6 +11,7 @@ const IndexPage = () => {
         edges {
           node {
             id
+            slug
             title
             content
             created_at
@@ -28,7 +29,7 @@ const IndexPage = () => {
       <ul>
         {data.allStrapiArticle.edges.map(document => (
           <li key={document.node.id}>
-            <Link to={`/${document.node.id}`}>{document.node.title}</Link>
+            <Link to={`/${document.node.slug}`}>{document.node.title}</Link>
           </li>
         ))}
       </ul>

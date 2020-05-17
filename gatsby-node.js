@@ -26,15 +26,15 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
+            slug
           }
         }
       }
     }
     `).then(result => {
-    // Create pages for each article.
     result.data.allStrapiArticle.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.id}`,
+        path: `/${node.slug}`,
         component: path.resolve(`src/templates/article.js`),
         context: {
           id: node.id,
