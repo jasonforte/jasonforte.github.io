@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `From Cape Town 🠖 London`,
-    subtitle: '|  A blog about tech, ethics, startups & the future',
+    title: `Cape Town 🠖 London`,
+    subtitle: 'A blog about tech, ethics & startups',
     description: `I'm Jason Forte and this blog is about tech, ethics, startups & the future.`,
     author: `@hellojforte`,
   },
@@ -10,18 +10,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/articles`
+      }
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-strapi',
-      options: {
-        apiURL: 'http://localhost:1337',
-        contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
-          'article'
-        ],
-        queryLimit: 1000,
       },
     },
     `gatsby-transformer-sharp`,

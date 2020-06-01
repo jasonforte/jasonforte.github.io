@@ -21,23 +21,27 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const getArticles = makeRequest(graphql, `
-    {
-      allStrapiArticle {
-        edges {
-          node {
-            id
+  {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          frontmatter {
             slug
           }
         }
       }
     }
-    `).then(result => {
-    result.data.allStrapiArticle.edges.forEach(({ node }) => {
+  }
+  `).then(result => {
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.slug}`,
+        path: `${node.frontmatter.slug}`,
         component: path.resolve(`src/templates/article.js`),
         context: {
-          id: node.id,
+          slug: node.frontmatter.slug,
         },
       })
     })

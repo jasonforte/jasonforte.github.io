@@ -20,6 +20,10 @@ html {
   font-size: 62.5%; // 1rem = 10px; 10px / 16px = 62.5%
 }
 
+header {
+  text-align: center;
+}
+
 body {
   font-family: "Ubuntu 2", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
@@ -84,6 +88,10 @@ main {
 
     &:hover {
       color: $color-silver;
+    }
+
+    & > a {
+      color: $color-flame;
     }
   }
 }
