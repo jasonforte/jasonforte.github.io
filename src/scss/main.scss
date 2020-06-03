@@ -16,9 +16,14 @@ html {
 
 a {
   text-decoration: none;
+  color: rgb(0,0,0);
 
   &:visited {
     color: inherit;
+  }
+
+  &:hover {
+    color: $color-flame;
   }
 }
 
@@ -61,7 +66,7 @@ p {
 article {
 
   &>h1 {
-    margin: 1.8rem 0 1rem;
+    margin: 1.8rem 0 0.6rem;
   }
 }
 
@@ -102,6 +107,9 @@ main {
 
   &>.article__meta {
     margin-top: 1rem;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.6rem;
+    border-bottom: 0.1rem solid rgba(0,0,0,0.27);
   }
 }
 
