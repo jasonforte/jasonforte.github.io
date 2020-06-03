@@ -1,142 +1,147 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/hack.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Raleway&family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Raleway&family=Roboto:wght@300;400&display=swap');
 
 @import "variables";
 
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
   box-sizing: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 html {
   font-size: 62.5%; // 1rem = 10px; 10px / 16px = 62.5%
+  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0,0,0);
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    color: $color-flame;
+  }
 }
 
 header {
   text-align: center;
+  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 1.8rem;
+
+  &>h1,
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  &>h1 {
+    font-size: 2.7rem;
+  }
+
+  &>h2 {
+    font-size: 1.6rem;
+  }
 }
 
 body {
-  font-family: "Ubuntu 2", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-}
-
-header {
-  margin: 0 auto;
-  max-width: 110rem;
-  padding: 0.5rem 0rem;
-  margin-bottom: 1.45rem;
-
-
-  & .title {
-    font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    text-decoration: none;
-    font-size: 2.4rem;
-    color: $secondary-dark;
-  }
-
-  & .subtitle {
-    font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    line-height: 1.1;
-    font-size: 1.4rem;
-    color: $secondary-dark;
-    padding-left: 0.1rem;
-  }
-}
-
-main {
-  max-width: 76.8rem;
-  margin: 0 auto;
-}
-
-
-.article {
-
-  &__heading {
-    font-family: "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 4.0rem;
-    font-weight: 300;
-    letter-spacing: -1px;
-  }
-
-  &__meta {
-    font-size: 1.6rem;
-    margin-bottom: 0.7rem;
-    color: $gray-01;
-
-    & > span {
-      color: $color-black;
-    }
-  }
-
-  &__blurb {
-    margin-top: 1.4rem;
-  }
-
-  &__readmore {
-    margin-top: 1.4rem;
-    font-size: 1.4rem;
-
-    &:hover {
-      color: $color-silver;
-    }
-
-    & > a {
-      color: $color-flame;
-    }
-  }
-}
-
-.article__content {
-  margin-top: 0.2rem;
-
-  font-family: "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1.6rem;
-  color: $article-color;
-  line-height: 1;
+  background-color: #feefe294;
+}
 
-  & > h2 {
-    font-size: 2.8rem;
-    margin-top: 2.4rem;
-    margin-bottom: 1.2rem;
-    letter-spacing: -1px;
-  }
+p {
+  margin: 1rem 0;
 
-  & > pre {
-    background-color: rgb(242, 242, 242);
-    padding: 1.2rem;
-    margin: 1.2rem 0;
+  &>code {
+    background-color: rgba(214, 214, 214, 0.72);
+    padding: 0.2rem 0.5rem;
     border-radius: 0.2rem;
-
-    & > code {
-      font-size: 1.3rem;
-      font-family: 'Hack', Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-      line-height: 2.2rem;
-    }
+    font-size: 1.4rem;
   }
 }
 
 article {
-  &:not(:first) {
-    border-top: solid 1px $color-black;
+
+  &>h1 {
+    margin: 1.8rem 0 0.6rem;
   }
 }
 
 footer {
   margin-top: 5rem;
-  width: 100%;
   text-align: center;
+}
+
+.article__meta {
   font-size: 1.4rem;
-  font-weight: 400;
-  color: $gray-01;
-  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.54);
+  margin: 0.5rem 0;
+}
+
+.article__list {
+  &>article:nth-child(1) {
+    margin-top: 2.8rem;
+  }
+}
+
+.article__readmore {
+  &:hover {
+    color: $color-silver;
+  }
+
+  &>a {
+    color: $color-flame;
+  }
+}
+
+
+main {
+  padding-top: 2rem;
+
+  &>h1 {
+    margin: 1rem 0;
+  }
+
+  &>.article__meta {
+    margin-top: 1rem;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.6rem;
+    border-bottom: 0.1rem solid rgba(0,0,0,0.27);
+  }
+}
+
+pre {
+  background-color: rgba(255, 255, 255, 0.72);
+  padding: 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0.2rem;
+
+  &>code {
+    font-size: 1.3rem;
+    font-family: 'Hack', Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    line-height: 2.2rem;
+  }
+}
+
+.article__content {
+  &>p>a {
+    color: $color-flame;
+  }
+
+  &>p>em{
+    color: rgba(0,0,0,0.54);
+  }
+
+  &>blockquote {
+    border-left: 1px solid rgba(0, 0, 0, 0.27);
+    padding: 0.8rem 2.4rem;
+    margin: 0;
+    color: rgba(0,0,0,0.54);
+    &>p>a {
+      color: $color-flame;
+    }
+  }
 }

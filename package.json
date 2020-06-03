@@ -34,14 +34,14 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build && cp CNAME ./dist",
+    "build": "gatsby build && cp CNAME public/CNAME",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "npm build && gh-pages -d public -b master"
+    "deploy": "npm run build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
