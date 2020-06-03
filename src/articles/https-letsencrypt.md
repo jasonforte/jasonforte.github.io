@@ -2,9 +2,7 @@
 slug: "/2018/04/generate-an-https-cert-using-lets-encrypt"
 date: "2018-04-27"
 title: "Generate an HTTPS cert using LetsEncrypt"
-blurb: |
-	This article is the third in a series of articles outlining how to setup a highly available, scalable, serverless
-	single page application (SPA) using AWS S3.
+blurb: This article is the third in a series of articles outlining how to setup a highly available, scalable, serverless single page application (SPA) using AWS S3.
 ---
 
 This article is the third in a series of articles outlining how to setup a highly available, scalable, serverless single page application (SPA) using AWS S3.
