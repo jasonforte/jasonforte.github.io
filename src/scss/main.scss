@@ -28,6 +28,7 @@ body {
   font-family: "Ubuntu 2", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   line-height: 1.7;
+  background-color: #feefe294;
 }
 
 header {
@@ -62,15 +63,14 @@ main {
 .article {
 
   &__heading {
-    font-family: "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 4.0rem;
+    font-family: "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 3.8rem;
     font-weight: 300;
     letter-spacing: -1px;
   }
 
   &__meta {
     font-size: 1.6rem;
-    margin-bottom: 0.7rem;
     color: $gray-01;
 
     & > span {
@@ -112,7 +112,8 @@ main {
   }
 
   & > pre {
-    background-color: rgb(242, 242, 242);
+    // background-color: rgb(242, 242, 242);
+    background-color: rgb(255, 255, 255);
     padding: 1.2rem;
     margin: 1.2rem 0;
     border-radius: 0.2rem;
@@ -123,11 +124,9 @@ main {
       line-height: 2.2rem;
     }
   }
-}
 
-article {
-  &:not(:first) {
-    border-top: solid 1px $color-black;
+  & > p {
+    margin-top: 0.8rem;
   }
 }
 
