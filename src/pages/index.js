@@ -53,7 +53,7 @@ const IndexPage = () => {
             <p className={"article__blurb"}>{blurbFormat(document.node.frontmatter.blurb)}</p>
           </div>
           <p className={"article__readmore"}>
-            <Link to={document.node.frontmatter.slug}>Continue Reading 🠖</Link>
+            <Link to={document.node.frontmatter.slug}>Continue Reading &rarr;</Link>
           </p>
         </article>
       )

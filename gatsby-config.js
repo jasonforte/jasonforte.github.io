@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Cape Town 🠖 London`,
+    title: `Cape Town &rarr; London`,
     subtitle: 'A blog about tech, ethics & startups',
     description: `I'm Jason Forte and this blog is about tech, ethics, startups & the future.`,
     author: `@hellojforte`,
