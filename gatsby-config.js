@@ -4,6 +4,7 @@ module.exports = {
     subtitle: 'A blog about tech, ethics & startups',
     description: `I'm Jason Forte and this blog is about tech, ethics, startups & the future.`,
     author: `@hellojforte`,
+    siteUrl: `https://www.jforte.me`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,7 +42,8 @@ module.exports = {
       options: {
         trackingId: 'UA-26326918-3'
       }
-    }
+    },
+    `gatsby-plugin-feed`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

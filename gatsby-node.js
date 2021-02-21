@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const { createFilePath } = require('gatsby-source-filesystem')
 const path = require('path')
 
 const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
@@ -50,3 +51,15 @@ exports.createPages = ({ actions, graphql }) => {
   // Query for articles nodes to use in creating pages.
   return getArticles;
 };
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value
+    })
+  }
+}
