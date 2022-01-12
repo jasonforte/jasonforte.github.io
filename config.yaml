@@ -3,7 +3,7 @@ languageCode: 'en-us'
 title: 'Cape Town to London'
 
 googleAnalytics: "UA-26326918-3"
-theme: "anubis"
+theme: "anubis-custom"
 
 params:
   subtitle: 'A blog about tech, ethics & startups'
