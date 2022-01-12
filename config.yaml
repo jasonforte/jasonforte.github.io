@@ -1,0 +1,19 @@
+baseURL: 'https://jforte.me'
+languageCode: 'en-us'
+title: 'Cape Town to London'
+
+googleAnalytics: "UA-26326918-3"
+theme: "anubis"
+
+params:
+  subtitle: 'A blog about tech, ethics & startups'
+
+  author: Jason Forte
+
+  social:
+  - id: github
+    name: JasonForte
+  - id: linkedin
+    name: jasonforte
+  - id: twitter
+    name: theJasonForte
