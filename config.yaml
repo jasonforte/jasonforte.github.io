@@ -5,6 +5,8 @@ title: 'Cape Town to London'
 googleAnalytics: "UA-26326918-3"
 theme: "anubis-custom"
 
+rssLimit: 10
+
 params:
   subtitle: 'A blog about tech, ethics & startups'
 
